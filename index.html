@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CatGallery · The Cat API</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>CatGallery</h1>
+
+    <nav class="nav">
+      <button id="btn-favorites" aria-controls="favorites" aria-expanded="false">Favoritos (0)</button>
+    </nav>
+  </header>
+
+  <!--Controles para los filtros  por raza + filtro por tipo de archivo-->
+  <section class="controls">
+    <label for="breed-select">Raza:</label>
+    <select id="breed-select">
+      <option value="">Todas</option>
+    </select>
+
+    <!-- agrupo los inputs relacionados y con el el legend los describo-->
+    <fieldset class="mime-filter">
+      <legend>Tipo</legend>
+      
+      <label><input type="checkbox" name="mime" value="jpg" checked> JPG</label>
+      <label><input type="checkbox" name="mime" value="png"> PNG</label>
+      <label><input type="checkbox" name="mime" value="gif"> GIF</label>
+    </fieldset>
+  </section>
+
+  <main class="layout">
+    <!--anuncia cambios a lectores de pantalla -->
+    <section id="gallery" class="grid" aria-live="polite"></section>
+
+    <!-- Panel lateral de favoritos con el boton tipo toggel-->
+    <aside id="favorites" class="favorites" hidden>
+      <h2>Favoritos</h2>
+      <div id="fav-grid" class="grid"></div>
+    </aside>
+  </main>
+
+  <!-- divs para mensajes(errores, info) y spinner de carga-->
+  <div id="status" role="status" aria-live="polite"></div>
+  <div id="spinner" class="spinner" hidden>Cargando…</div>
+
+  <!-- Anado un modal para que vea los datso detalle de la raza -->
+  <dialog id="info-modal" class="modal">
+    <article>
+      <header>
+        <h3 id="modal-title">Detalles de la raza</h3>
+        <button id="modal-close" aria-label="Cerrar">✕</button>
+      </header>
+      <div id="modal-body"></div>
+    </article>
+  </dialog>
+
+  <!--Añado el Sentinele en un div “invisible” observado por IntersectionObserver para el scroll infinito -->
+  <div id="sentinel" class="sentinel" aria-hidden="true"></div>
+
+  <!-- Entrada de la app: módulos ES -->
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

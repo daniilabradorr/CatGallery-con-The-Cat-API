@@ -1,27 +1,33 @@
-CatGallery · The Cat API - EJERCICIO CONQUEBLOCKS
+# CatGallery · The Cat API - EJERCICIO CONQUEBLOCKS 🐈
 
-Galería de gatos hecha con JavaScript vanilla (ES Modules), usando fetch, scroll infinito, favoritos con localStorage, filtro por raza y por tipo de imagen COMO PEDIAIS EN EL ENUNCIADO.
-Proyecto para la Propuesta 3 del módulo de JS.
+Galería de gatos hecha con **JavaScript**, usando `fetch`, **scroll infinito** (`IntersectionObserver`), **favoritos con `localStorage`**, y **filtro por raza y por tipo de imagen** tal y como se lo solicitabais en el enunciado.
 
-https://daniilabradorr.github.io/CatGallery-con-The-Cat-API/
+Proyecto desarrollado para la **Propuesta 3** del módulo de JavaScript.
 
-✨ Funcionalidades
+## 🔗 Demo en Vivo
 
-✅ Galería de imágenes desde The Cat API
+Puedes ver el proyecto funcionando aquí:
 
-✅ Scroll infinito (IntersectionObserver)
+[https://daniilabradorr.github.io/CatGallery-con-The-Cat-API/](https://daniilabradorr.github.io/CatGallery-con-The-Cat-API/)
 
-✅ Favoritos: añadir/eliminar y persistencia en localStorage
+---
 
-✅ Filtros: por raza (select de /breeds) y por tipo (jpg/png/gif)
+## ✨ Funcionalidades Destacadas
 
-✅ Estados de carga (spinner) y errores con botón Reintentar
+* ✅ **Galería de imágenes** desde The Cat API
+* ✅ **Scroll infinito** (implementado con `IntersectionObserver`)
+* ✅ **Favoritos**: añadir/eliminar y persistencia mediante `localStorage`
+* ✅ **Filtros**: por **raza** (`select` con datos de `/breeds`) y por **tipo de imagen** (`jpg`/`png`/`gif`)
+* ✅ **Manejo de Estados**:
+    * **Estados de carga** (spinner)
+    * **Manejo de errores** con botón "Reintentar"
+* ♿ **Accesibilidad**: uso de `aria-live`, `aria-pressed`, `aria-controls`
 
-♿ Accesibilidad: aria-live, aria-pressed, aria-controls
+> **Nota**: Los detalles de raza en modal eran opcionales según el enunciado y no los he incluido ya que eran opcinal.
 
-Nota: los detalles de raza en modal eran opcionales según el enunciado y no se incluyen.
+---
 
-📦 Estructura
+## 📦 Estructura del Proyecto
 /
 ├─ index.html
 ├─ styles.css #un minimo de estilo para que se vea decente
@@ -32,24 +38,21 @@ Nota: los detalles de raza en modal eran opcionales según el enunciado y no se 
    └─ main.js     # orquesta eventos, filtros y scroll infinito
 
 
+   ## ✅ Checklist del Enunciado (Propuesta 3)
 
-✅ Checklist del enunciado (Propuesta 3)
+| Requisito | Cumplimiento |
+| :--- | :---: |
+| Publicación en GitHub Pages | ✅ |
+| Galería con imágenes de The Cat API | ✅ |
+| Favoritos persistentes (`localStorage`) | ✅ |
+| Paginación vía scroll infinito | ✅ |
+| Estados de carga (spinner) y errores con reintento | ✅ |
+| Filtros (raza y tipo) | ✅ |
+| (Opcional) Modal con datos de raza | ❌ (No incluido ya que era opcional) |
 
- Publicación en GitHub Pages
+---
 
- Galería con imágenes de The Cat API
+## 👏 Créditos
 
- Favoritos persistentes (localStorage)
-
- Paginación vía scroll infinito
-
- Estados de carga (spinner) y errores con reintento
-
- Filtros (raza y tipo)
-
- (Opcional) Modal con datos de raza (no incluido por decisión de alcance)
-
-
-👏 Créditos
-
-Imágenes y datos: procedentes de la api: https://api.thecatapi.com/v1
+* **Imágenes y datos**: Procedentes de The Cat API
+    * **API URL**: `https://api.thecatapi.com/v1`
